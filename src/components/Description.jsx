@@ -5,14 +5,14 @@ import RedDecore from "../images/RedDecore.svg";
 export default function Description(params) {
   return (
     <section class="flex justify-between items-center">
-      <div class="max-w-xl space-y-4 relative">
-        <h4 className="uppercase text-2xl font-bold text-[#DF6951]">best destinations around the world</h4>
+      <div class="space-x-1 relative">
+        <h4 className="uppercase text-[12px] leading-3 sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-bold text-[#DF6951]">best destinations around the world</h4>
         <Image
           src={RedDecore}
           alt=""
           class="w-96 h-3 object-cover absolute top-28 -right-24 -z-10"
         />
-        <h1 class="text-[5rem] leading-snug font-bold text-[#181E4B] font-serif w-[37rem]">
+        <h1 class="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.5rem] 2xl:text-[5rem] w-[20rem] 2xl:w-[37rem] leading-snug font-bold text-[#181E4B] font-serif">
           Travel, enjoy and live a new and full life
         </h1>
         <p class="text-[#5E6282] text-lg w-[477px] leading-[2.375rem]">
@@ -36,7 +36,7 @@ export default function Description(params) {
         <Image
           src={Travel}
           alt=""
-          className="w-[1400px] h-[850px] translate-x-7 -translate-y-6"
+          className=" 2xl:w-[1400px] 2xl:h-[850px] 2xl:translate-x-7 2xl:-translate-y-6"
         />
       </div>
     </section>

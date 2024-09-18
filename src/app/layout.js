@@ -23,26 +23,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className=" overflow-x-hidden scrollbar-hide">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden scrollbar-hide`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen overflow-x-hidden scrollbar-hide mx-auto`}
       >
         <Image
           src={PurpleShadow}
           alt=""
-          className="w-[40rem] h-[60rem] absolute -top-56 -left-60"
+          className="w-[20rem] h-[20rem]  sm:w-[16rem] sm:h-[28rem] md:w-[22rem] ms:h-[36rem] lg:w-[28rem] lg:h-[44rem] xl:w-[34rem] xl:h-[52rem] 2xl:w-[40rem] 2xl:h-[60rem] absolute -top-16 -left-20 sm:-top-32 sm:-left-16 md:-top-38 md:-left-36 lg:-top-44 lg:-left-44 xl:-top-50 xl:-left-52 2xl:-top-56 2xl:-left-60"
         />
         <Image
           src={RightDecore}
           alt=""
-          className="w-[766px] h-[873px] absolute -top-32 -right-48"
+          className="w-64 h-80 sm:w-[366px] sm:h-[448px] md:w-[466px] md:h-[548px] lg:w-[566px] lg:h-[673px] xl:w-[666px] xl:h-[773px] 2xl:w-[766px] 2xl:h-[873px] absolute -top-12 -right-20 sm:-top-20 sm:-right-24 md:-top-24 md:-right-28 lg:-top-24 lg:-right-36 xl:-top-32 xl:-right-48"
         />
         {children}
-        <Image
-          src={Plus}
-          alt=""
-          className="size-[14px] absolute top-[145.5%] right-[0.1%]"
-        />
       </body>
     </html>
   );
