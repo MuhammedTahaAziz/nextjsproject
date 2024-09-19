@@ -15,7 +15,18 @@ module.exports = {
         foreground: "var(--foreground)",
       },
     },
+    screens: {
+      "2xl":"1536px",
+      "xl":"1280px",
+      "lg":"1024px",
+      "md":"768px",
+      "sm":"640px",
+      "xs":"512px",
+      "2xs":"384px",
+      "3xs":"256px",
+    },
   },
   darkMode: "class",
+
   plugins: [nextui()]
 };

@@ -4,14 +4,20 @@ import logo from "../images/logo.svg";
 import Expand from "../images/Expand.png";
 import Link from "next/link";
 import Language from "../components/Language.jsx";
-import { navigationPages } from "./data";
+import { navigationPages } from "../lib/data";
 import { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <header className={`w-full h-auto  pt-10 z-50 absolute ${isOpen?"h-96 duration-150 backdrop-blur":"w-full h-auto duration-150"}`}>
+    <header
+      className={`w-full pt-10 z-50 absolute ${
+        isOpen
+          ? "h-auto duration-150 backdrop-blur-lg"
+          : "w-full h-auto duration-150"
+      }`}
+    >
       <nav className="w-10/12 mx-auto flex justify-between items-center font-semibold text-md ">
         <Link href={`/`}>
           <Image src={logo} alt="" className="w-20 xl:w-40 h-8 xl:h-10" />
@@ -25,6 +31,7 @@ export default function Navbar() {
                   key={index}
                   href={page.path}
                   className="text-black hover:text-[#DF6951] duration-150"
+                  onClick={() => (setOpen(false))}
                 >
                   <button className="h-10">{page.title}</button>
                 </Link>
@@ -84,6 +91,21 @@ export default function Navbar() {
           </span>
         </div>
       </nav>
+      {isOpen ? (
+        <nav className="w-10/12 mx-auto my-10 flex flex-col gap-2">
+          {navigationPages.map((page, index) => (
+            <Link
+              key={index}
+              href={page.path}
+              className="w-40 px-4 text-black rounded hover:bg-[#DF6951] hover:text-white duration-200"
+            >
+              <button className="h-10">{page.title}</button>
+            </Link>
+          ))}
+        </nav>
+      ) : (
+        ""
+      )}
     </header>
   );
 }

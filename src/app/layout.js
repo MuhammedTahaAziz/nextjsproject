@@ -2,8 +2,9 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Image from "next/image";
 import PurpleShadow from "../images/PurpleShadow.svg";
-import RightDecore from "../images/RightDecore.svg";
+import RightDecore from "../images/RightDecore.png";
 import Plus from "../images/Plus.svg";
+import Navbar from "@/components/Navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,8 +26,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className=" overflow-x-hidden scrollbar-hide">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen overflow-x-hidden scrollbar-hide mx-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden scrollbar-hide mx-auto`}
       >
+        <Navbar/>
         <Image
           src={PurpleShadow}
           alt=""
@@ -35,7 +37,7 @@ export default function RootLayout({ children }) {
         <Image
           src={RightDecore}
           alt=""
-          className="w-64 h-80 sm:w-[366px] sm:h-[448px] md:w-[466px] md:h-[548px] lg:w-[566px] lg:h-[673px] xl:w-[666px] xl:h-[773px] 2xl:w-[766px] 2xl:h-[873px] absolute -top-12 -right-20 sm:-top-20 sm:-right-24 md:-top-24 md:-right-28 lg:-top-24 lg:-right-36 xl:-top-32 xl:-right-48"
+          className=" w-48 h-80 sm:w-[366px] sm:h-[448px] md:w-[426px] md:h-[548px] lg:w-[566px] lg:h-[673px] xl:w-[666px] xl:h-[773px] 2xl:w-[766px] 2xl:h-[873px] md:block absolute top-0 -right-0  md:-right-0 lg:-right-30 xl:-right-40"
         />
         {children}
       </body>

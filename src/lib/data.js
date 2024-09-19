@@ -38,19 +38,19 @@ export let services = [
 export let navigationPages = [
   {
     title: "Destinations",
-    path: `/`,
+    path: `/Destinations`,
   },
   {
     title: "Hotels",
-    path: `/`,
+    path: `/Hotels`,
   },
   {
     title: "Flights",
-    path: `/`,
+    path: `/Flights`,
   },
   {
     title: "Bookings",
-    path: `/`,
+    path: `/Bookings`,
   },
 ];
 

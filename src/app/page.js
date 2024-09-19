@@ -6,14 +6,12 @@ import Services from "@/components/Services";
 
 export default function Home() {
   return (
-    <div className=" overflow-x-hidden scrollbar-hide">
-      <Navbar />
-      <div className="w-10/12 h-full mx-auto pt-20 overflow-x-hidden scrollbar-hide">
+    <div className="w-10/12 h-full mx-auto pt-20  scrollbar-hide">
+      {/* <Navbar /> */}
         <Description />
         <Services />
         <Destination />
         <Booking />
-      </div>
     </div>
   );
 }
