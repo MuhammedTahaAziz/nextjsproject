@@ -13,7 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     setOpen(false);
-  }, []);
+  }, [setOpen]);
 
   return (
     <div className="w-10/12 h-full mx-auto pt-20  scrollbar-hide"
