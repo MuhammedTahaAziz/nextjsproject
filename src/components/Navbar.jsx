@@ -6,9 +6,11 @@ import Link from "next/link";
 import Language from "../components/Language.jsx";
 import { navigationPages } from "../lib/data";
 import { useState } from "react";
+import useOpenStore from '../lib/useOpenStore';
 
 export default function Navbar() {
-  const [isOpen, setOpen] = useState(false);
+  // const [isOpen, setOpen] = useState(false);
+  const { isOpen, setOpen } = useOpenStore();
 
   return (
     <header
@@ -59,7 +61,7 @@ export default function Navbar() {
               className="size-10 border-3 border-black rounded xl:hidden flex flex-col justify-center items-center gap-2 cursor-pointer"
               onClick={() => {
                 setOpen(!isOpen);
-              }}
+            }}
             >
               <span
                 className={`w-6 h-1 bg-black ${

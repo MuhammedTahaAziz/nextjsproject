@@ -69,7 +69,7 @@ export default function Booking() {
           </div>
         </div>
 
-        <div className="w-[80%] sm:w-[70%] lg:w-[90%] max-w-[263px] bg-white z-20 rounded-2xl shadow-xl 3xs:shadow-2xl shadow-gray-200 p-3 3xs:p-4 sm:absolute sm:left-1/2 sm:bottom-0 lg:left-[60%] lg:bottom-[10%] sm:-translate-x-1/2 lg:translate-x-0 sm:-translate-y-1/2 lg:-translate-y-0">
+        <div className="w-[80%] sm:w-[70%] lg:w-[90%] max-w-[263px] bg-white z-20 rounded-2xl shadow-xl 3xs:shadow-2xl shadow-gray-200 p-3 3xs:p-4 sm:absolute sm:left-1/2 sm:bottom-0 lg:left-[60%] lg:bottom-[10%] sm:-translate-x-1/2 lg:-translate-x-[1rem] xl:translate-x-[4.125rem] sm:-translate-y-1/2 lg:-translate-y-12">
           <div className="flex items-center space-x-3 3xs:space-x-4">
             <Image src={Mosque} alt="" className="w-10 h-10 3xs:w-12 3xs:h-12 flex-shrink-0" />
             <div className="flex-grow">
