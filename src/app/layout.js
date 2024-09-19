@@ -3,7 +3,6 @@ import "./globals.css";
 import Image from "next/image";
 import PurpleShadow from "../images/PurpleShadow.svg";
 import RightDecore from "../images/RightDecore.png";
-import Plus from "../images/Plus.svg";
 import Navbar from "@/components/Navbar";
 
 const geistSans = localFont({
@@ -37,7 +36,7 @@ export default function RootLayout({ children }) {
         <Image
           src={RightDecore}
           alt=""
-          className=" w-48 h-80 sm:w-[366px] sm:h-[448px] md:w-[426px] md:h-[548px] lg:w-[566px] lg:h-[673px] xl:w-[666px] xl:h-[773px] 2xl:w-[766px] 2xl:h-[873px] md:block absolute top-0 -right-0  md:-right-0 lg:-right-30 xl:-right-40"
+          className=" w-48 h-80 sm:w-[366px] sm:h-[448px] md:w-[426px] md:h-[548px] lg:w-[566px] lg:h-[673px] xl:w-[666px] xl:h-[773px] 2xl:w-[766px] 2xl:h-[873px] md:block absolute top-0 -right-0  md:-right-0 lg:-right-30 xl:-right-32"
         />
         {children}
       </body>

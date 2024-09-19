@@ -1,14 +1,6 @@
-"use client";
-
-import useOpenStore from "@/lib/useOpenStore";
 import Link from "next/link";
-import { useEffect } from "react";
-export default function page(params) {
-  const { isOpen, setOpen } = useOpenStore();
 
-  useEffect(() => {
-    setOpen(false);
-  }, []);
+export default function page(params) {
 
   return (
     <div className="w-full h-screen flex justify-center items-center">

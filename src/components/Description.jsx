@@ -36,7 +36,7 @@ export default function Description(params) {
         <Image
           src={Travel}
           alt=""
-          className="w-[522px] -translate-x-[35px] xs:w-[550px] sm:w-[600px] md:w-[650px] lg:w-[700px]  xl:w-[765.5px] sm:translate-x-0 translate-y-0 2xl:-translate-x-10 2xl:translate-y-20 hidden 2xs:inline-block"
+          className="w-[522px] -translate-x-[35px] xs:w-[550px] sm:w-[600px] md:w-[650px] lg:w-[700px]  xl:w-[765.5px] sm:translate-x-0 translate-y-0 2xl:-translate-x-10 2xl:translate-y-12 hidden 2xs:inline-block"
         />
       </div>
     </section>

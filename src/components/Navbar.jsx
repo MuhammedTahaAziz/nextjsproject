@@ -6,11 +6,13 @@ import Link from "next/link";
 import Language from "../components/Language.jsx";
 import { navigationPages } from "../lib/data";
 import { useState } from "react";
-import useOpenStore from '../lib/useOpenStore';
 
 export default function Navbar() {
-  // const [isOpen, setOpen] = useState(false);
-  const { isOpen, setOpen } = useOpenStore();
+  const [isOpen, setOpen] = useState(false);
+  const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("KUR");
+
+  const languages = ["KUR", "ENG", "ARB"]; // Add or modify languages as needed
 
   return (
     <header
@@ -33,13 +35,12 @@ export default function Navbar() {
                   key={index}
                   href={page.path}
                   className="text-black hover:text-[#DF6951] duration-150"
-                  onClick={() => (setOpen(false))}
                 >
                   <button className="h-10">{page.title}</button>
                 </Link>
               ))}
             </div>
-            <div className="items-center hidden xl:flex">
+            <div className="items-center hidden xl:flex relative">
               <Link
                 href="/"
                 className="px-[2rem] py-[0.75rem] flex justify-center items-center border-2 border-transparent rounded hover:bg-black hover:text-white hover:border-2 hover:border-black duration-100 "
@@ -52,16 +53,37 @@ export default function Navbar() {
               >
                 Signup
               </Link>
-              <button className="flex items-center gap-2 border-2 translate-x-4 border-transparent hover:border-black duration-150 p-3 rounded">
-                EN
-                <Image src={Expand} alt="" className="w-3 h-2" />
-              </button>
+              <div className="relative">
+                <button 
+                  className="flex items-center gap-2 border-2 translate-x-4 border-transparent hover:border-black duration-150 p-3 rounded"
+                  onClick={() => setLanguageDropdownOpen(!isLanguageDropdownOpen)}
+                >
+                  {selectedLanguage}
+                  <Image src={Expand} alt="" className="w-3 h-2" />
+                </button>
+                {isLanguageDropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-24 bg-white border border-gray-200 rounded-md shadow-lg">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang}
+                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        onClick={() => {
+                          setSelectedLanguage(lang);
+                          setLanguageDropdownOpen(false);
+                        }}
+                      >
+                        {lang}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
             <span
               className="size-10 border-3 border-black rounded xl:hidden flex flex-col justify-center items-center gap-2 cursor-pointer"
               onClick={() => {
                 setOpen(!isOpen);
-            }}
+              }}
             >
               <span
                 className={`w-6 h-1 bg-black ${
